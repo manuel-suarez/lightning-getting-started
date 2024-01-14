@@ -1,4 +1,5 @@
 import os
+import torch
 from typing import Any
 
 from lightning.pytorch.utilities.types import STEP_OUTPUT
