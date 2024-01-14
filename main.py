@@ -46,7 +46,7 @@ trainer = L.Trainer(limit_train_batches=100, max_epochs=1)
 trainer.fit(model=autoencoder, train_dataloaders=train_loader)
 
 # load checkpoint
-checkpoint = "./lightning_logs/version_0/checkpoints/epochs=0-step=100.ckpt"
+checkpoint = "./lightning_logs/version_0/checkpoints/epoch=0-step=100.ckpt"
 autoencoder = LitAutoEncoder.load_from_checkpoint(checkpoint, encoder=encoder, decoder=decoder)
 
 # choose your trained nn.Module
