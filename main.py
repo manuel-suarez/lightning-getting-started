@@ -40,3 +40,7 @@ autoencoder = LitAutoEncoder(encoder, decoder)
 # setup data
 dataset = MNIST(os.getcwd(), download=True, transform=ToTensor())
 train_loader = utils.data.DataLoader(dataset)
+
+# train the model (hint: here are some helpful Trainer arguments for rapid idea iteration)
+trainer = L.Trainer(limit_train_batches=100, max_epochs=1)
+trainer.fit(moderl=autoencoder, train_dataloaders=train_loader)
