@@ -36,3 +36,7 @@ class LitAutoEncoder(L.LightningModule):
 
 # init the autoencoder
 autoencoder = LitAutoEncoder(encoder, decoder)
+
+# setup data
+dataset = MNIST(os.getcwd(), download=True, transform=ToTensor())
+train_loader = utils.data.DataLoader(dataset)
